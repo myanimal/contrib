@@ -75,6 +75,7 @@ read($sock, $rep, substr($result,1)) || die "can't read from socket: $!";
 
 my $hash;
 foreach (split(/\r\n/, $rep)) {
+    next if $_ eq '';
     my ($key,$val) = split(/:/, $_, 2);
     $hash->{$key} = $val;
 }
