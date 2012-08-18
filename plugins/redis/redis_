@@ -90,7 +90,7 @@ close ($sock);
 switch ($TASK) {
     case "connected_clients" {
         if ( $config ) {
-            print "graph_title Connected clients\n";
+            print "graph_title Connected clients ($PORT)\n";
             print "graph_vlabel Connected clients\n";
             print "graph_category redis\n";
             print "graph_args -l 0\n";
@@ -104,7 +104,7 @@ switch ($TASK) {
 
     case "keys_per_sec" {
         if ( $config ) {
-            print "graph_title Keys Per Second\n";
+            print "graph_title Keys Per Second ($PORT)\n";
             print "graph_vlabel per \${graph_period}\n";
             print "graph_category redis\n";
             print "graph_args -l 0\n";
@@ -127,7 +127,7 @@ switch ($TASK) {
 
     case "key_ratio" {
         if ( $config ) {
-            print "graph_title Key Hit vs Miss Ratio\n";
+            print "graph_title Key Hit vs Miss Ratio ($PORT)\n";
             print "graph_vlabel per \${graph_period}\n";
             print "graph_category redis\n";
             print "graph_args -u 100 -l 0 -r --base 1000\n";
@@ -148,7 +148,7 @@ switch ($TASK) {
 
     case "per_sec" {
         if ( $config ) {
-            print "graph_title Per second\n";
+            print "graph_title Per second ($PORT)\n";
             print "graph_vlabel per \${graph_period}\n";
             print "graph_category redis\n";
             print "graph_args -l 0\n";
@@ -166,7 +166,7 @@ switch ($TASK) {
 
     case "used_memory" {
         if ( $config ) {
-            print "graph_title Used memory\n";
+            print "graph_title Used memory ($PORT)\n";
             print "graph_vlabel Used memory\n";
             print "graph_category redis\n";
             print "graph_args -l 0\n";
@@ -187,7 +187,7 @@ switch ($TASK) {
         }
 
         if ( $config ) {
-            print "graph_title Used keys\n";
+            print "graph_title Used keys ($PORT)\n";
             print "graph_vlabel Used keys\n";
             print "graph_category redis\n";
             print "graph_args -l 0\n";
